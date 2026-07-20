@@ -1,0 +1,106 @@
+:root {
+    --color-principal: #2457a7;
+    --color-secundario: #17386d;
+    --color-fondo: #f4f7fb;
+    --color-error: #c62828;
+    --color-exito: #198754;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: #25313c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado {
+    background: linear-gradient(
+        135deg,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+}
+
+.encabezado h1 {
+    font-weight: 700;
+}
+
+.presentacion {
+    padding: 25px;
+    background-color: white;
+    border-left: 6px solid var(--color-principal);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tarjeta-estudiante {
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta-estudiante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mensaje-error {
+    min-height: 20px;
+    margin-top: 4px;
+    color: var(--color-error);
+    font-size: 0.85rem;
+}
+
+.campo-invalido {
+    border-color: var(--color-error);
+}
+
+.campo-valido {
+    border-color: var(--color-exito);
+}
+
+footer {
+    margin-top: 40px;
+}
+
+/* Diseño para tablet */
+@media (max-width: 768px) {
+    .encabezado h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Diseño para celular */
+@media (max-width: 480px) {
+    .encabezado h1 {
+        font-size: 1.5rem;
+    }
+
+    .encabezado p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .presentacion {
+        padding: 18px;
+    }
+}
